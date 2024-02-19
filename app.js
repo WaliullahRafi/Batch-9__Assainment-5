@@ -11,7 +11,7 @@ const cards = document.querySelectorAll("#card");
 for (let card of cards) {
   card.addEventListener("click", () => {
     if (seatCount === 5) {
-      card.setAttribute("disabled");
+      // card.setAttribute("disabled");
       return;
     }
 
@@ -90,10 +90,6 @@ const btn = document
 
 const nextBtn = document.querySelector("#next__btn");
 nextBtn.addEventListener("click", () => {
-  const nameId = document.querySelector("#name__id");
-  const numberId = document.querySelector("#number__id");
-  const emailId = document.querySelector("#email__id");
-
   showElementById("pop__up");
 
   const continueBtn = document.querySelector("#continue__btn");
@@ -109,12 +105,9 @@ nextBtn.addEventListener("click", () => {
     document.querySelector("#seats__left").innerText = "40";
     document.querySelector("#total__price").innerText = "0";
 
-    // information details clear
     document.querySelector("#grand__total").innerText = "0";
     nameId.value = "";
     numberId.value = "";
     emailId.value = "";
-
-    // backgroundColor clearing
   });
 });
